@@ -19,7 +19,7 @@ Requirements
  SET UP
 1. Clone the Repository
 commands:
-	git clone https://github.com/yourusername/tic-tac-toe.git
+	git clone https://github.com/Rakesh260/tic-tac-toe.git
 	cd tic-tac-toe
 
 2.Install Dependencies
