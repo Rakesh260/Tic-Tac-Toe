@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -8,20 +7,10 @@ from django.contrib.auth.models import User
 class Player(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    # author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'player'
         managed = True
-
-# class Game(models.Model):
-#     player = models.ForeignKey(Player, on_delete=models.CASCADE)
-#     board = models.CharField(max_length=9, default=" " * 9)  # 9 characters for 9 cells
-#     result = models.CharField(max_length=10, choices=[('win', 'Win'), ('lose', 'Lose'), ('draw', 'Draw')])
-#
-#     def __str__(self):
-#         return f"{self.player} - {self.result}"
-
 
 class Game(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)

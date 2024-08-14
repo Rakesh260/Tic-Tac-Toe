@@ -1,6 +1,5 @@
-from django.http import JsonResponse
+
 from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
 from .models import Player, Game, Leaderboard
 import random
 
