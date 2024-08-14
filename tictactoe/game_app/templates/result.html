@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Result</title>
+</head>
+<body>
+    <h1>Game Result: {{ result }}</h1>
+<!--    <p>Final Board:</p>-->
+<!--    <table>-->
+<!--        {% for i in range %}-->
+<!--        <tr>-->
+<!--            {% for j in range %}-->
+<!--            <td>{{ board|slice:"i*3+j:i*3+j+1" }}</td>-->
+<!--            {% endfor %}-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--    </table>-->
+    <a href="{% url 'play' player.id %}">Play Again/Restart</a><br/>
+    <a href="{% url 'leaderboard'  %}">Leader Board</a>
+</body>
+</html>
